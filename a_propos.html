@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos - Red Bull</title>
+    <link rel="stylesheet" href="a_propos.css">
+</head>
+<body>
+
+<header>
+    <div class="header-overlay"></div> 
+    <div class="logo-section"> 
+        <img src="logo.png" alt="">
+        <h3>Red Bull</h3>
+    </div>
+
+    <!-- Bouton hamburger -->
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    
+    <nav class="menu" id="nav-menu">
+        <a href="index.html">Accueil</a>
+        <a href="products.html">Nos produits</a>
+        <a href="a_propos.html">A propos</a>
+    </nav>
+</header>
+
+<section class="abc">
+    <div class="section">
+        <div class="text-content">
+            <h2>Entreprise</h2>
+            <p>
+                Red Bull est bien plus qu'une simple boisson énergisante. 
+                Depuis sa création, la marque s'est imposée comme un symbole de dépassement de soi
+                et d'audace. Avec son slogan emblématique <span class="highlight">"Red Bull donne des ailes"</span>, 
+                l'entreprise incarne l'esprit d'aventure et la performance extrême dans le monde entier.
+            </p>
+        </div>
+        <div class="image-content">
+            <img src="logo-redbull.jpg" alt="Red Bull Logo">
+        </div>
+    </div>
+</section>
+
+<div class="section reverse">
+    <div class="text-content">
+        <h2>Sport</h2>
+        <p>
+            Red Bull investit énormément dans le sport, notamment en 
+            <span class="highlight">Formule 1</span> avec l'écurie Red Bull Racing, mais aussi dans de 
+            nombreux sports extrêmes. La marque soutient des athlètes exceptionnels 
+            et organise des événements spectaculaires qui repoussent les limites du possible.
+        </p>
+    </div>
+    <div class="image-content">
+        <img src="red-bull-racing.jpg" alt="Red Bull F1">
+    </div>
+</div>
+
+<section class="newsletter-box">
+    <div class="newsletter">
+        <h2>S'inscrire à la newsletter :</h2>
+        <input type="text" placeholder="email: exemple@domaine.com">
+        <button type="submit">Envoyer</button>
+    </div>
+</section>
+    
+<footer>
+    <div class="footer-box">
+        <div class="icones">
+            <a href="https://www.facebook.com/RedBull/"><img src="facebook.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/redbullfrance/?hl=fr"><img src="instagram.png" alt="Instagram"></a>
+            <a href="https://x.com/redbull"><img src="twitter.png" alt="X"></a>
+            <a href="https://www.youtube.com/@redbull"><img src="youtube.png" alt="YouTube"></a>
+        </div>
+        <div class="nav-footer">
+            <ul>
+                <li><a href="">Conditions d'utilisations</a></li>
+                <li><a href="">Politiques de confidentialités</a></li>
+                <li><a href="">Nous contacter</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bas">
+        <p>Red Bull - © - All Rights Reserved</p>
+    </div>
+</footer>
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('open');
+        hamburger.classList.toggle('active');
+    });
+
+    navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('open');
+            hamburger.classList.remove('active');
+        });
+    });
+</script>
+</body>
+</html>
